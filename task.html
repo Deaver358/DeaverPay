@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tasks | DeaverPay</title>
+
+<link rel="stylesheet" href="task.css">
+<link rel="stylesheet" href="notification.css">
+<link rel="stylesheet" href="main.css">
+</head>
+
+<body class="task-page">
+
+<header class="logo">
+  <img src="logo.jpeg" alt="DeaverPay Logo">
+  <span>DeaverPay</span>
+</header>
+
+<!-- POPUP NOTIFICATIONS -->
+<div id="notificationContainer"></div>
+
+<main class="task-container">
+
+<!-- HERO -->
+<section class="task-hero">
+  <div class="hero-text">
+    <h1>Earn or Hire — Seamlessly</h1>
+    <p>Complete tasks or hire skilled individuals efficiently and securely.</p><br>
+
+    <div class="hero-actions">
+      <button onclick="goToSection('availableTasks')">View Available Tasks</button>
+      <button class="gold" onclick="goToSection('addTask')">Post a Task</button>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="task.jpeg" alt="Tasks illustration">
+  </div>
+</section>
+
+<!-- TASK NOTE & SOCIAL ENGAGEMENT -->
+<section class="task-note-section">
+  <h2 class="visually-hidden">About Social and General Tasks</h2>
+
+  <div class="social-note-icons">
+    <img src="ig.jpeg" alt="Instagram icon">
+    <img src="x.jpeg" alt="X (Twitter) icon">
+    <img src="fb.jpeg" alt="Facebook icon">
+  </div>
+
+  <p>
+    Social media and general tasks on DeaverPay open up a world of opportunities for both individuals and businesses looking to engage and grow. From liking, sharing, or commenting on posts, to creating content, reviewing products, or even helping brands increase their online visibility, social media tasks allow users to earn while interacting with platforms they already use daily. Beyond social media, tasks can range from simple micro-jobs such as submitting surveys, providing feedback, writing short articles, or participating in online campaigns, to more professional assignments including designing graphics, coding small features, creating presentations, or managing small projects. Each task posted is clear, concise, and comes with an assigned reward, ensuring participants know exactly what is expected and what they will earn.
+  </p>
+
+  <div class="note-buttons">
+    <button onclick="scrollToTasks()">View Available Tasks</button>
+  </div>
+</section>
+
+<!-- AVAILABLE TASKS -->
+<section id="availableTasks" class="tasks-section">
+  <h2>Available Tasks</h2><br>
+  <div id="taskList" class="task-list"></div>
+</section>
+
+<img src="job.jpeg" class="job-img" alt="Job posting illustration">
+
+<!-- JOB NOTE -->
+<section class="task-note-section">
+  <h2 class="visually-hidden">Post a Job</h2>
+
+  <p>
+    Posting a job on DeaverPay allows you to connect with skilled individuals who are ready to deliver quality results. Whether you need a designer, developer, content writer, or any specialized talent, you can clearly outline your requirements, expectations, and budget in one place. Job postings attract qualified applicants who can submit proposals or supporting documents, making it easy for you to review, communicate, and select the right person for the task.
+  </p>
+
+  <div class="note-buttons">
+    <button class="gold" onclick="goToSection('addTask')">Post Your Task</button>
+  </div>
+</section>
+
+<!-- ADD TASK -->
+<section id="addTask" class="add-task-section">
+  <h2>Post a Task</h2><br>
+
+  <form id="taskForm">
+    <input id="taskTitle" placeholder="Task Title" required>
+
+    <textarea id="taskDesc" placeholder="Describe the task" required></textarea>
+
+    <select id="taskType">
+      <option value="simple">Simple / Social Task</option>
+      <option value="job">Professional / Job Task</option>
+    </select>
+
+    <div id="requirements"></div>
+
+    <select id="taskDuration">
+      <option value="7">7 days</option>
+      <option value="14">14 days</option>
+      <option value="30">30 days</option>
+      <option value="custom">Custom</option>
+    </select>
+
+    <input id="customDuration" type="number" placeholder="Custom duration (days)" style="display:none">
+
+    <input id="taskPay" type="number" placeholder="Payment ($)" required>
+
+    <button type="submit">Post Task</button>
+  </form>
+</section>
+
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item active">
+    <img src="home.svg" alt="Home icon">
+    <span>Home</span>
+  </a>
+
+  <a href="task.html" class="nav-item active">
+    <img src="task.svg" alt="Tasks icon">
+    <span>Tasks</span>
+  </a>
+
+  <a href="payment.html" class="nav-item active">
+    <img src="payment.svg" alt="Payment icon">
+    <span>Payment</span>
+  </a>
+
+  <a href="profile.html" class="nav-item active">
+    <img src="user.svg" alt="Profile icon">
+    <span>Profile</span>
+  </a>
+</nav>
+
+<!-- SCROLL HELPERS -->
+<script>
+function scrollToTasks(){
+  const section = document.getElementById("availableTasks");
+  const top = section.offsetTop;
+  const distance = Math.abs(window.scrollY - top);
+
+  if(distance > 150){
+    section.scrollIntoView({ behavior: "smooth" });
+  } else {
+    section.classList.add("shake");
+    setTimeout(() => section.classList.remove("shake"), 600);
+  }
+}
+
+function scrollToAddTask(){
+  const section = document.getElementById("addTask");
+  const top = section.offsetTop;
+  const distance = Math.abs(window.scrollY - top);
+
+  if(distance > 150){
+    section.scrollIntoView({ behavior: "smooth" });
+  } else {
+    section.classList.add("shake");
+    setTimeout(() => section.classList.remove("shake"), 600);
+  }
+}
+</script>
+
+<script src="task.js"></script>
+<script src="notification.js"></script>
+
+</body>
+</html>

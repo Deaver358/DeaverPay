@@ -1,0 +1,65 @@
+/* GENERAL RESPONSIVE ADJUSTMENTS */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+
+  .hero-content {
+    font-size: 95%;
+  }
+
+  .bottom-nav {
+    height: 55px;
+  }
+}
+
+/* Phones / small screens */
+@media screen and (max-width: 768px) {
+  .hero-content {
+    padding: 10px;
+    font-size: 90%;
+  }
+
+  button {
+    padding: 8px 15px;
+  }
+
+  input, select, textarea {
+    padding: 8px;
+  }
+
+  .bottom-nav .nav-item svg,
+  .bottom-nav .nav-item img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bottom-nav .nav-item span {
+    font-size: 10px;
+  }
+}
+
+/* Very small phones */
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .topbar img.logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .bottom-nav .nav-item svg,
+  .bottom-nav .nav-item img {
+    width: 20px;
+    height: 20px;
+  }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - DeaverPay</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="transaction.css"> <!-- new professional CSS -->
+</head>
+<body class="payment-page">
+<div id="notificationContainer"></div>
+  <!-- Header logo -->
+<header class="logo">
+  <img src="logo.jpeg" alt="DeaverPay Logo" class="logo-img">
+  <span>DeaverPay</span>
+</header>
+
+<main class="dashboard">
+  <h1 class="dashboard-title">Payment Dashboard</h1>
+
+  <!-- Balance Card -->
+  <div class="balance-card">
+    <div class="balance-row">
+      <h2 id="balance">$0.00</h2>
+      <span id="toggleBalance" class="eye-toggle" title="Show / Hide Balance">👁️</span>
+    </div>
+    <div class="currency-switch">
+      <button onclick="setCurrency('$')" class="currency-btn">$ USD</button>
+      <button onclick="setCurrency('₦')" class="currency-btn">₦ NGN</button>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="actions">
+    <button id="depositBtn" onclick="deposit()">Deposit</button>
+    <button id="withdrawBtn" onclick="withdraw()">Withdraw</button>
+  </div>
+
+  <!-- Transaction History -->
+  <section class="history">
+    <h3>Transaction History</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="history-body">
+        <tr id="no-history">
+          <td colspan="3">No transaction history yet</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item active">
+    <img src="home.svg" alt="Home"><span>Home</span>
+  </a>
+  <a href="task.html" class="nav-item active">
+    <img src="task.svg" alt="Tasks"><span>Tasks</span>
+  </a>
+  <a href="payment.html" class="nav-item active">
+    <img src="payment.svg" alt="Payment"><span>Payment</span>
+  </a>
+  <a href="profile.html" class="nav-item active">
+    <img src="user.svg" alt="Profile"><span>Profile</span>
+  </a>
+</nav>
+
+<script src="payment.js"></script>
+<div id="notificationContainer"></div>
+<script src="notification.js"></script>
+</body>
+</html>

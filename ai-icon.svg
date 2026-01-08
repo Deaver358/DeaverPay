@@ -1,0 +1,32 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .lemon-part { fill: #FFF700; }  /* Bright Lemon for Head/Arms */
+      .yellow-body { fill: #FFCC00; } /* Deeper Yellow for Body */
+      .white-detail { fill: #FFFFFF; }
+      .black-detail { fill: #1A1A1A; }
+    </style>
+  </defs>
+
+  <circle cx="256" cy="65" r="15" class="lemon-part" />
+  <rect x="251" y="80" width="10" height="30" class="lemon-part" />
+
+  <path d="M136,190 C136,120 376,120 376,190 C376,245 320,270 256,270 C192,270 136,245 136,190 Z" class="lemon-part"/>
+  
+  <rect x="116" y="170" width="20" height="40" rx="10" class="lemon-part"/>
+  <rect x="376" y="170" width="20" height="40" rx="10" class="lemon-part"/>
+
+  <rect x="186" y="165" width="140" height="50" rx="25" class="white-detail" />
+  
+  <circle cx="221" cy="190" r="10" class="black-detail" />
+  <circle cx="291" cy="190" r="10" class="black-detail" />
+
+  <path d="M130,310 C100,330 100,380 130,410 C140,420 155,405 145,395 C125,375 125,345 145,325 Z" class="lemon-part"/>
+  <path d="M382,310 C412,330 412,380 382,410 C372,420 357,405 367,395 C387,375 387,345 367,325 Z" class="lemon-part"/>
+
+  <path d="M166,300 C156,300 156,350 196,410 C226,450 286,450 316,410 C356,350 356,300 346,300 Z" class="yellow-body"/>
+
+  <text x="256" y="380" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="60" text-anchor="middle" class="white-detail" letter-spacing="-2">
+    AI
+  </text>
+</svg>

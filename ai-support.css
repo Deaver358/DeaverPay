@@ -1,0 +1,153 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.ai-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #0b1e5b;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.ai-header .back-btn {
+  color: #fff;
+  margin-right: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 500px;
+  margin: auto;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 10px;
+}
+
+.message {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  word-wrap: break-word;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #0b1e5b;
+  color: #fff;
+}
+
+.message.ai {
+  align-self: flex-start;
+  background-color: #333;
+  color: #fff;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 8px;
+}
+
+#chatInput {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+#sendMsg {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: #0b1e5b;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== AI Support Page ===== */
+body.ai-body {
+  background: linear-gradient(135deg, #0f0c29, #04b6fc, #24243e); /* dark gradient */
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header / Page Title */
+.ai-body h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Paragraph Text */
+.ai-body p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+
+/* AI Robot Image */
+.ai-body .ai-image {
+  width: 70px;          /* Adjust width */
+  height: auto;          /* maintain aspect ratio */
+  border-radius: 20px;   /* rounded corners */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+
+.ai-body .ai-image:hover {
+  transform: scale(1.05); /* subtle hover zoom */
+}
+
+/* Optional: AI chat container (future chat area) */
+.ai-body .chat-container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* AI page footer */
+.ai-body footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #bbbbbb;
+  text-align: center;
+}

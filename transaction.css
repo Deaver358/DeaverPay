@@ -1,0 +1,124 @@
+.transaction-page {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #0458df, #c2e9fb); /* light blue gradient */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.transaction-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.tx-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.tx-card label {
+  font-weight: bold;
+}
+
+.tx-card select,
+.tx-card input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+}
+
+.tx-card select {
+  color: #001f3f;
+}
+
+.tx-card input {
+  color: #001f3f;
+  font-weight: bold;
+}
+
+.tx-card button {
+  background: #28a745; /* Green */
+  color: #fff;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tx-card button:hover {
+  background: #218838;
+}
+
+.tx-card a {
+  text-align: center;
+  margin-top: 15px;
+  color: #001f3f;
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* Withdraw button - yellow style */
+#withdrawBtn {
+  background: linear-gradient(90deg, #ff9500) !important; /* bright yellow gradient */
+  color: #fff !important; /* black text for contrast */
+  font-weight: bold !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 12px 25px !important;
+  cursor: pointer !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+#withdrawBtn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+}
+#depositBtn {
+  background: linear-gradient(90deg, rgb(7, 1, 76)) !important; /* bright yellow gradient */
+  color: #fff !important; /* black text for contrast */
+  font-weight: bold !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 12px 25px !important;
+  cursor: pointer !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+#withdrawBtn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+}
+/* Header logo */
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  color: gold;
+}
+.logo img { width: 40px;border-radius: 12px; }
+.logo span { font-size: 1.4rem; font-weight: bold; }
+/* Deposit & Withdrawal Page Background */
+body.deposit-page,
+body.withdraw-page {
+  background: linear-gradient(135deg, #000000, #021184); /* soft blue gradient */
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}

@@ -1,0 +1,78 @@
+.transaction-page {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff); /* light blue gradient */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.transaction-page h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.transaction-page p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #f0f0f0;
+}
+
+.tx-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+}
+
+.tx-card label {
+  font-weight: bold;
+  color: #fff;
+}
+
+.tx-card select,
+.tx-card input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.tx-card input {
+  color: #001f3f;
+  font-weight: bold;
+}
+
+.tx-card button {
+  background: #28a745; /* green */
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.tx-card button:hover {
+  background: #218838;
+}
+
+.tx-card option {
+  font-weight: bold;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}

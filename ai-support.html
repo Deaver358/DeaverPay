@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Support - DeaverPay</title>
+<link rel="stylesheet" href="ai-support.css">
+<link rel="stylesheet" href="main.css">
+</head>
+<body class="ai-body">
+<header class="ai-header">
+  <h2>AI Support</h2><br><br>
+</header>
+<header class="logo">
+  <img src="logo.jpeg" alt="DeaverPay Logo">
+  <span>DeaverPay</span>
+</header><br>
+<img src="ai.jpeg" alt="AI Robot" class="ai-image">
+<p>Welcome to DeaverPay AI Support. Ask any questions, and our AI assistant will guide you!</p>
+<main class="chat-container">
+  <div id="chatMessages" class="chat-messages"></div>
+  <div class="chat-input-area">
+    <input id="chatInput" type="text" placeholder="Ask me anything..." />
+    <button id="sendMsg">Send</button>
+  </div>
+</main><br><br><br>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item active">
+    <img src="home.svg" alt="Home">
+    <span>Home</span>
+  </a>
+  <a href="task.html" class="nav-item active">
+    <img src="task.svg" alt="Tasks">
+    <span>Tasks</span>
+  </a>
+  <a href="payment.html" class="nav-item active">
+    <img src="payment.svg" alt="Payment">
+    <span>Payment</span>
+  </a>
+  <a href="profile.html" class="nav-item active">
+    <img src="user.svg" alt="Profile">
+    <span>Profile</span>
+  </a>
+</nav>
+
+<script src="ai-support.js"></script>
+
+<script>
+  // Flag visitor came from landing (no auth yet)
+  sessionStorage.setItem("ai_guest", "true");
+</script>
+
+<script>
+  const navLinks = document.querySelectorAll(".bottom-nav a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      const isGuest = sessionStorage.getItem("ai_guest") === "true";
+      if (isGuest) {
+        e.preventDefault();
+        window.location.href = "login.html";
+      }
+    });
+  });
+</script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("from") === "landing") {
+    sessionStorage.setItem("ai_guest", "true");
+  } else {
+    sessionStorage.removeItem("ai_guest");
+  }
+</script>
+</body>
+</html>

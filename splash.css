@@ -1,0 +1,23 @@
+/* Full page background, centered content */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #0b1a3b; /* dark navy */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the video/logo */
+.video-container {
+  width: 20%;       /* adjust width as needed */
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;       /* maintain aspect ratio */
+  display: block;
+}

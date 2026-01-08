@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Notifications | DeaverPay</title>
+<link rel="stylesheet" href="notification.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="notification-page">
+
+<!-- Header -->
+<header class="notification-header">
+  <button class="back-btn" onclick="history.back()">←</button>
+  <h2>Notifications</h2>
+</header>
+
+<!-- Main notification container -->
+<main class="notification-container">
+  <ul id="notificationList">
+    <li class="empty">No notifications yet</li>
+  </ul>
+</main>
+
+<!-- Popup container (for notifications on any page) -->
+<div id="notificationContainer"></div>
+
+<script src="notification.js"></script>
+</body>
+</html>

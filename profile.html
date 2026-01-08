@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="profile-body">
+<div id="notificationContainer"></div>
+  <!-- Header logo -->
+<header class="logo">
+  <img src="logo.jpeg" alt="DeaverPay Logo" class="logo-img">
+  <span>DeaverPay</span>
+</header>
+
+  <main class="content profile-page">
+
+  <!-- PROFILE CARD -->
+  <section class="profile-card">
+
+    <div class="avatar-container">
+      <img id="avatarPreview" src="avatar.jpeg" alt="Profile Avatar">
+      <label class="avatar-edit">
+        Change Photo
+        <input type="file" id="avatarInput" accept="image/*" hidden>
+      </label>
+
+      <button class="avatar-remove" onclick="removeAvatar()">Remove Photo</button>
+    </div>
+
+    <h2>User Profile</h2>
+
+    <!-- USER INFO -->
+<div class="profile-form">
+  <input id="fullName" type="text" placeholder="Full Name">
+  <input id="email" type="email" placeholder="Email" disabled>
+  <input id="username" type="text" placeholder="Username" disabled>
+
+  <!-- Country & Phone -->
+  <label for="countryCode">Country</label>
+  <select id="countryCode">
+    <option value="+1"> USA (+1)</option>
+    <option value="+234">Nigeria (+234)</option>
+  </select>
+
+  <label for="phone">Phone Number</label>
+  <input id="phone" type="tel" placeholder="Phone Number">
+
+  <input id="age" type="number" placeholder="Age">
+
+  <button onclick="saveProfile()">Save Profile</button>
+</div>
+
+
+  </section>
+
+  <!-- AI Support Floating Icon -->
+<a href="ai-support.html" class="ai-floating-btn">
+  <!-- Use a proper inline SVG or image link -->
+  <img src="ai-icon.svg" alt="AI Support Icon" class="ai-icon-img">
+  <span>AI Support</span>
+</a>
+
+  <!-- SETTINGS -->
+  <section class="settings-card">
+    <h3>Settings</h3>
+
+    <a href="change-password.html" class="btn">Change password</a><br>
+    <a href="ai-support.html" class="ai-btn">AI Customer Support</a>
+    <button class="logout-btn" onclick="logout()">Log Out</button>
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>&copy; 2026 DeaverPay. All rights reserved.</p>
+</footer>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item active">
+    <img src="home.svg" alt="Home">
+    <span>Home</span>
+  </a>
+  <a href="task.html" class="nav-item active">
+    <img src="task.svg" alt="Tasks">
+    <span>Tasks</span>
+  </a>
+  <a href="payment.html" class="nav-item active">
+    <img src="payment.svg" alt="Payment">
+    <span>Payment</span>
+  </a>
+  <a href="profile.html" class="nav-item active">
+    <img src="user.svg" alt="Profile">
+    <span>Profile</span>
+  </a>
+</nav>
+<script src="profile.js"></script>
+<div id="notificationContainer"></div>
+<script src="notification.js"></script>
+</body>
+</html>
